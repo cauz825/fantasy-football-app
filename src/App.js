@@ -7,7 +7,14 @@ import { Container } from 'semantic-ui-react'
 function App() {   
   
   const [topStories, setTopStories] = useState({})
-  
+
+  // useEffect(() => {
+  //   fetch('')
+  //     .then(resp => resp.json())
+  //     .then(console.log)
+  // }, []
+  // )
+
   return (
     <Container>
       {/* <NavBar /> */}
