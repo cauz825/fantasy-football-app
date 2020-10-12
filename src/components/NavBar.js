@@ -1,23 +1,32 @@
-import React, { useState } from 'react'
+import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 
-function NavBar() {
-    return(
-        <Menu>
-                <Menu.Item
-                    name='Top'
-                    className='Top'
-                    />
-                <Menu.Item
-                    name='Team News'
-                    className='Teams'
-                    />
-                <Menu.Item
-                    name='Player News'
-                    className="Players"
-                    />
-        </Menu>
-    )
-} 
+export default class NavBar extends Component {
+  state = { activeItem: 'Top Stories' }
 
-export default NavBar;
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+  render() {
+    const { activeItem } = this.state
+
+    return (
+      <Menu tabular>
+        <Menu.Item
+          name='Top Stories'
+          active={activeItem === 'Top Stories'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          name='Team News'
+          active={activeItem === 'Team News'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item
+          name='Player News'
+          active={activeItem === 'Player News'}
+          onClick={this.handleItemClick}
+        />
+      </Menu>
+    )
+  }
+}
