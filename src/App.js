@@ -1,26 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
-import Stories from './containers/Stories'
-// import NavBar from './components/NavBar'
-import { Container } from 'semantic-ui-react'
+import Form from './components/Form'
 
 function App() {   
-  
-  const [topStories, setTopStories] = useState({})
-
-  // useEffect(() => {
-  //   fetch('')
-  //     .then(resp => resp.json())
-  //     .then(console.log)
-  // }, []
-  // )
-
   return (
-    <Container>
-      {/* <NavBar /> */}
-      <Stories />
-    </Container>
-  );
+    <div>
+      Top Level
+      <Form />
+    </div>
+  )
 }
 
 export default App;
