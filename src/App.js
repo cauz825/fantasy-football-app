@@ -8,8 +8,9 @@ function App() {
   return (
     <div>
       Top Level
-      <Form />
-      <Standings />
+      <Form /><br></br>
+      <Standings /><br></br>
+      <Players />
     </div>
   )
 }
